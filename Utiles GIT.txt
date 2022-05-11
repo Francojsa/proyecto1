@@ -1,0 +1,69 @@
+GIT
+---– Configuracion GIT
+Git config --global user.name “el nombre” >>Cambia tu nombre
+git config --global user.email gfdgfg@gmail.com >> cambia tu email
+git config --global core.editor “code --wait” >>configurar por defecto el vscode
+git config --global -e >>ver la config de git
+git config --globa core.autocrlf  true >>saca el salto de linea en windows para linux en vez de true es input
+git config -h ver todas las opciones de configuracion
+
+--------------------Comandos GIT-----------------
+
+LS >>lista los archivos de la carpeta en la que estas posicionado
+LS -a >>lista los archivos sumando los ocultos
+PWD >> Indica el directorio donde estas
+CD  carpeta >> para entrar en una carpeta
+CD ..  >>volver un directorio atras en la gerarquia 
+MKDIR nombrecarpeta >>crear una carpeta con el nombre que se desea
+GIT INIT >> inicia git en la carpeta para que gestione los archivos
+GIT STATUS >> nos indica el estado de todos los archivos en el directorio/repo
+GIT STATUS -S >>Para visualizar el estatus mas lindo 
+RM  nobrearchivo>>Eliminar archivos(despues se tiene que hacer git add para elimiar d repo)
+GIT RM nombrearchivo>> directamente git lo deja para eliminarlo del stage 
+GIT RESTORE --STAGE nombrearhivo >> si esta la accion delet en stage con este comando volvermos atras
+MV nombrearchivoactual nombredeseado >> para cambiar el nombre de un archivo
+GIT MV  nombrearchivoactual nombredeseado >> para cambiar el nombre de un archivo y pegar en el repo todo directo.
+git diff >>para visualizar las diferencias
+git diff --staged >> ver contra la version que esta en stange contra la de commit
+
+GIT ADD  nombre archivo>> selecciona los archivos que pasaran a la etapa STAGE
+GIT ADD . >> agrega todo lo que tenga la parpeta
+GIT ADD *.txt >>usa una expresion regular , en este caso para add todas las ext TXT
+GIT COMMIT >> pasa los archivos del stage a el repositorio a la etapa COMMIT
+GIT COMMIT -M “MENSAJE”  >>buena practica indicar por que se versiono o modifico el archivo o para que es SIEMPRE METER MENSAJE
+ git log--  >>ver el log
+git log --oneline >> ver de forma mas comoda el log
+GIT BRANCH >> ver en que rama estamos trabajando
+git checkout nombreRAMA >> nos posicionamos sobre la rama deseada
+git checkout -b nombrederama >>crea una nueva rama 
+CAT NOMBREARCHIVO >> muestra el contenido del archivo
+GIT MERGE RAMAB >> realiza el merge copiando la rama seleccionada hacia la rama en la que estamos posicionados. 
+git remote add origin https://github.com/Francojsa/proyecto1.git
+>> esto es para indicar donde publicaremos nuestro main
+Git push -u origin master >> enviamos nuestro master  o rama segun lo que pongas al repo online o privado
+GIT PULL >> extraer descargar todo lo que tenemos en el repositorio remoto bajando todo al local
+
+
+--------------------Para ignorar archivos o carpetas
+se debe crear un archivo .gitignore en el que dentro especificaremos los archivos o carpetas a ignorar
+
+-----------------------Pasos para subir archivos
+despues de inicializar git en la carpeta comenzamos a subir los archivos que queresmso versionar
+Una vez que tenemos archivos en la carpeta que gestiona git para pasarlos a STAGE utilizamos el comando GIT ADD
+Si el el archivo despues de haberlo subido a la etapa de stage se modifica para que este el cambio en STAGE se tiene que volver a realizar el GIT ADD
+
+
+----------------------------Tener en cuenta -------------------
+Cuando hacemos git status los que salen en rojo git no los esta tomando
+tambien salen en rojo cuando se efectuaron cambios en el archivo y no se actualizo en git
+Los que estan ene verde esta en etapa stage
+
+----------------------------Tener en cuenta------------------
+-Los archivos primero estan en nuestra pc
+-el primer estadio donde se pasan los archivos se llama STAGE aun no esta en el repo es algo intermedio
+-Segundo estado es cuando se realiza el COMMIT  y ya estan versionados
+-Tercer estadio es pasarlo contra el repositorio en nube o privado segun el caso
+
+
+-------------ELIMINAR ARCHIVO
+la mecanica es subirlo de nuevo pero con la marca de eliminar esto es para que registre todo correctamente “Mejorar explicacion”
