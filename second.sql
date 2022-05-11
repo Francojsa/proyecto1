@@ -1,0 +1,2 @@
+select SYSDAT
+from dual;
