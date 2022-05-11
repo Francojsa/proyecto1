@@ -1,2 +1,2 @@
-select SYSDATE -1 
+select SYSDATE -3 
 from dual;
